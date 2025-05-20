@@ -1,0 +1,11 @@
+_format_version: "3.0"
+
+
+services:
+  - name: cdn-images-service
+    url: http://localstack:4566/my-bucket
+    routes:
+      - name: cdn-images-route
+        paths:
+          - /repository
+        strip_path: true

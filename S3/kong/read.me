@@ -1,0 +1,12 @@
+1- Create Image
+
+git clone git@github.com:ueno-tecnologia-org/platform-kong-dc.git
+cd platform-kong-dc
+git checkout dev
+docker build -t ueno-kong:latest .
+
+2- Copy Kong.yml
+
+3- docker run --rm --volume=./kong.yml:/etc/kong/kong.yml -p 8000:8000 -p 8001:8001 ueno-kong:latest
+
+
